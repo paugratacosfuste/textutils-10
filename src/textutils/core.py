@@ -85,3 +85,36 @@ def count_vowels(text):
     count = sum(1 for char in text if char in vowels)
     return count
 
+def replace_numbers(text):
+    numbers = {
+        "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
+        "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"
+    }
+    result = ""
+    for ch in text:
+        if ch in numbers:
+            result += numbers[ch]
+        else:
+            result += ch
+    return result
+
+def sentence_count(text):
+    count = 0
+    for ch in text:
+        if ch in [".", "!", "?"]:
+            count += 1
+    return count
+
+def average_word_length(text):
+    words = text.split()
+    if not words:
+        return 0
+    total_length = 0
+    for word in words:
+        # remove punctuation at word ends
+        clean = word.strip(".,!?;:")
+        total_length += len(clean)
+    return total_length / len(words)
+
+
+
