@@ -3,10 +3,10 @@ from .core import (
     top_n,
     normalize_whitespace,
     remove_punctuation,
-    #is_palindrome, #A
-    #unique_words, #A
-    #reverse_words, #A
-    #capitalize_sentences,#A
+    is_palindrome, #A (collaborative)
+    unique_words, #A (collaborative)
+    #reverse_words, #A (collaborative)
+    #capitalize_sentences,#A (collaborative)
     word_lengths, #L
     strip_accents, #L
     slugify, #L
