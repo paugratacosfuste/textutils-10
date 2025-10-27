@@ -16,9 +16,9 @@ from .core import (
     #collapse_duplicates, #S
     #is_anagram, #S
     #compare_texts, #s
-    #replace_numbers, #P
-    #sentence_count, #p
-    #average_word_length, #P
+    replace_numbers, #P
+    sentence_count, #p
+    average_word_length, #P
 )
 
 # Define __all__ for clarity

@@ -111,7 +111,6 @@ def average_word_length(text):
         return 0
     total_length = 0
     for word in words:
-        # remove punctuation at word ends
         clean = word.strip(".,!?;:")
         total_length += len(clean)
     return total_length / len(words)
