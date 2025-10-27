@@ -56,13 +56,14 @@ def remove_punctuation(text):
 def is_palindrome(text):
     #@allesandro to collaborate with sean here
     #check if word read forward is same as backward, ignoring case and space
-    
+    pass  # placeholder implementation for now
 
 def unique_words(text):
     #@pau to collaborate with sean here
     #return a sorted list of distinct words (case-insensitive)
+    pass  # placeholder implementation for now
 
-#Laura and Jan to collaborate on def reverse_words
+#Laura and Jan to collaborate on def reverse_words:
 
 #COLLAB SECTION END
 
