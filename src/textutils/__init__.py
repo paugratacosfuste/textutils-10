@@ -7,10 +7,10 @@ from .core import (
     #unique_words, #A
     #reverse_words, #A
     #capitalize_sentences,#A
-    #word_lengths, #L
-    #strip_accents, #L
-    #slugify, #L
-    #count_vowels, #L
+    word_lengths, #L
+    strip_accents, #L
+    slugify, #L
+    count_vowels, #L
     #camel_to_snake,#S
     #truncate, #S
     #collapse_duplicates, #S
