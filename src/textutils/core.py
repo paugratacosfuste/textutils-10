@@ -50,3 +50,40 @@ def remove_punctuation(text):
         if char not in string.punctuation:
             result += char
     return result
+
+def word_lengths(text):
+    """
+    Return a list of the lengths of each word in the text.
+    """
+    text = remove_punctuation(text) # uses function from above since otherwise counts punctuation
+    words = text.split()
+    lengths = [len(word) for word in words]
+    return lengths
+
+def strip_accents(text):
+    """
+    Remove accents from characters in the text.
+    """
+    import unicodedata
+    normalized = unicodedata.normalize('NFD', text)
+    stripped = ''.join(c for c in normalized if unicodedata.category(c) != 'Mn')
+    return stripped
+
+def slugify(text):
+    """
+    Convert text to a URL-friendly slug.
+    """
+    text = text.lower()
+    text = strip_accents(text)  # uses function from above
+    text = remove_punctuation(text)  # uses function from above
+    text = normalize_whitespace(text)  # uses function from above
+    slug = text.replace(" ", "-")
+    return slug
+
+def count_vowels(text):
+    """
+    Count the number of vowels in the text.
+    """
+    vowels = "aeiouAEIOU"
+    count = sum(1 for char in text if char in vowels)
+    return count
