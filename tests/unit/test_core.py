@@ -18,33 +18,23 @@ def test_normalize_whitespace_basic():
 
 def test_remove_punctuation():
     text = "Hello, world! It's a great day."
-    assert remove_punctuation(text) == "Hello world Its a great day"
+    assert c.remove_punctuation(text) == "Hello world Its a great day"
 
-
-from textutils import word_lengths 
 def test_word_lengths():    
     text = "Hello, world!"
-    assert word_lengths(text) == [5, 5]
+    assert c.word_lengths(text) == [5, 5]
     
-
-
-from textutils import strip_accents
 def test_strip_accents():
     text = "Café naïve façade"
-    assert strip_accents(text) == "Cafe naive facade"
+    assert c.strip_accents(text) == "Cafe naive facade"
     
-
-
-from textutils import slugify
 def test_slugify():
     text = "Hello World! This is TextUtils."
-    assert slugify(text) == "hello-world-this-is-textutils"
+    assert c.slugify(text) == "hello-world-this-is-textutils"
     
-
-from textutils import count_vowels
 def test_count_vowels():
     text = "Hello World"
-    assert count_vowels(text) == 3
+    assert c.count_vowels(text) == 3
     
 
 
