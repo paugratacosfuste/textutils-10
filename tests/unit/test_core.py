@@ -35,27 +35,27 @@ from textutils import word_lengths
 def test_word_lengths():    
     text = "Hello, world!"
     assert word_lengths(text) == [5, 5]
-    return lengths
+    
 
 
 from textutils import strip_accents
 def test_strip_accents():
     text = "Café naïve façade"
     assert strip_accents(text) == "Cafe naive facade"
-    return lengths
+    
 
 
 from textutils import slugify
 def test_slugify():
     text = "Hello! This is TextUtils10."
     assert slugify(text) == "hello-world-this-is-textutils10"
-    return lengths
+    
 
 from textutils import count_vowels
 def test_count_vowels():
     text = "Hello World"
     assert count_vowels(text) == 3
-    return lengths
+    
 
 
 
