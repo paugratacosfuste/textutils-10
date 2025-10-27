@@ -118,9 +118,7 @@ def is_anagram(a, b):
     b = b.lower().replace(" ", "")
     
     return sorted(a) == sorted(b) #sorted seperates into individual characters alphabetically. if anogram, it will be TRUE
-
-is_anagram('listen','listenl')
-
+#SEAN AREA END
 
 def replace_numbers(text):
     numbers = {
