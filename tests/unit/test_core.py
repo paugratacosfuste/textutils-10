@@ -7,7 +7,6 @@ def test_word_count_basic():
     text = "Hello, hello world!"
     assert c.word_count(text) == {"hello": 2, "world": 1}
 
-
 def test_top_n_tiebreaker():
     counts = {"hello": 3, "apple": 3, "world": 1}
     assert c.top_n(counts, 2) == [("apple", 3), ("hello", 3)]
@@ -19,6 +18,22 @@ def test_normalize_whitespace_basic():
 def test_remove_punctuation():
     text = "Hello, world! It's a great day."
     assert c.remove_punctuation(text) == "Hello world Its a great day"
+
+def test_is_palindrome():
+    #@allesandro to collaborate here
+    pass  # placeholder
+
+def test_unique_words(text):
+    #@pau to collaborate here
+    pass  # placeholder
+
+def test_reverse_words(text):
+    #@jan to collaborate here
+    pass  # placeholder
+
+def test_capitalize_sentences(text):
+    #@laura to collaborate here
+    pass  # placeholder
 
 def test_word_lengths():    
     text = "Hello, world!"
