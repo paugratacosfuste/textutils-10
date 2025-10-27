@@ -50,3 +50,10 @@ def remove_punctuation(text):
         if char not in string.punctuation:
             result += char
     return result
+
+
+    #camel_to_snake,#S
+    #truncate, #S
+    #collapse_duplicates, #S
+    #is_anagram, #S
+    #compare_texts, #s

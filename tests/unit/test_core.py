@@ -44,7 +44,6 @@ def test_strip_accents():
     assert strip_accents(text) == "Cafe naive facade"
     return lengths
 
-
 from textutils import slugify
 def test_slugify():
     text = "Hello! This is TextUtils10."
@@ -56,7 +55,4 @@ def test_count_vowels():
     text = "Hello World"
     assert count_vowels(text) == 3
     return lengths
-
-
-
 
