@@ -51,6 +51,7 @@ def remove_punctuation(text):
             result += char
     return result
 
+
 def word_lengths(text):
     """
     Return a list of the lengths of each word in the text.

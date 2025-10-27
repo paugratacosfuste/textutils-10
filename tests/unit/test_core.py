@@ -27,7 +27,7 @@ def test_word_lengths():
 def test_strip_accents():
     text = "Café naïve façade"
     assert c.strip_accents(text) == "Cafe naive facade"
-    
+    return lengths
 def test_slugify():
     text = "Hello World! This is TextUtils."
     assert c.slugify(text) == "hello-world-this-is-textutils"
