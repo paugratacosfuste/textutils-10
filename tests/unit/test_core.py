@@ -47,7 +47,7 @@ def test_strip_accents():
 
 from textutils import slugify
 def test_slugify():
-    text = "Hello! This is TextUtils."
+    text = "Hello World! This is TextUtils."
     assert slugify(text) == "hello-world-this-is-textutils"
     
 
