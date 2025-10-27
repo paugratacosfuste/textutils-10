@@ -54,16 +54,24 @@ def remove_punctuation(text):
 #COLLAB SECTION START
 
 def is_palindrome(text):
-    #@allesandro to collaborate with sean here
+    #@allesandro to collaborate here
     #check if word read forward is same as backward, ignoring case and space
     pass  # placeholder implementation for now
-
+ 
 def unique_words(text):
-    #@pau to collaborate with sean here
+    #@pau to collaborate here
     #return a sorted list of distinct words (case-insensitive)
-    pass  # placeholder implementation for now
+    pass  # placeholder 
 
-#Laura and Jan to collaborate on def reverse_words:
+def reverse_words(text):
+    #@jan to collaborate here
+    #reverse the order of words, not characters.
+    pass  # placeholder 
+
+def capitalize_sentences(text):
+    #@laura to collaborate here
+    #ensure each sentence starts with a capital letter. 
+    pass  # placeholder
 
 #COLLAB SECTION END
 
