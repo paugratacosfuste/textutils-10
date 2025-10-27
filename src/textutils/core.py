@@ -98,8 +98,6 @@ def replace_numbers(text):
             result += ch
     return result
 
-
-# 2. Count number of sentences in text
 def sentence_count(text):
     count = 0
     for ch in text:
@@ -107,8 +105,6 @@ def sentence_count(text):
             count += 1
     return count
 
-
-# 3. Compute mean length of words in text
 def average_word_length(text):
     words = text.split()
     if not words:
