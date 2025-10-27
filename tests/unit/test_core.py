@@ -36,7 +36,24 @@ def test_count_vowels():
     text = "Hello World"
     assert c.count_vowels(text) == 3
     
+def test_replace_numbers():
+    assert replace_numbers("I have 2 dogs and 1 cat") == "I have two dogs and one cat"
+    assert replace_numbers("2025") == "twozerotwofive"
+    assert replace_numbers("no digits") == "no digits"
+    print("replace_numbers passed")
 
+def test_sentence_count():
+    assert sentence_count("Hi. How are you? Fine!") == 3
+    assert sentence_count("No punctuation here") == 0
+    assert sentence_count("One... two.") == 2
+    print("sentence_count passed")
+
+def test_average_word_length():
+    assert round(average_word_length("I love AI"), 2) == 2.33
+    assert average_word_length("") == 0
+    assert average_word_length("Hi!") == 2
+    assert round(average_word_length("A cat, a dog."), 2) == 2.25
+    print("average_word_length passed")
 
 
 
