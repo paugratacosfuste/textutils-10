@@ -35,7 +35,29 @@ def test_slugify():
 def test_count_vowels():
     text = "Hello World"
     assert c.count_vowels(text) == 3
+
+def test_camel_to_snake(): #note , we assume acronyms (eg HTML) are 4 seperate words. and therefore will be H_T_M_L, not HTML.
+    assert c.camel_to_snake("CamelCase") == "camel_case"
+    assert c.camel_to_snake("SimpleTest") == "simple_test"
+    assert c.camel_to_snake("thisIsCamelCase") == "this_is_camel_case"
+
+def test_truncate():
+    assert c.truncate("Hello World", 5) == "He..."
+    assert c.truncate("Hello", 10) == "Hello"
+    assert c.truncate("", 5) == ""
     
+def test_collapse_duplicates():
+    assert c.collapse_duplicates("bookkeeper", "o") == "bokkeeper"
+    assert c.collapse_duplicates("a b a", "a") == "a b a"
+    assert c.collapse_duplicates("", "a") == ""
+
+def test_is_anagram():
+        assert c.is_anagram("listen", "silent") == True
+        assert c.is_anagram("LiStEn", "sIlEnT") == True
+        assert c.is_anagram("listen", "listen") == True
+        assert c.is_anagram("listen", "listenl") == False
+        assert c.is_anagram("", "") == True
+
 def test_replace_numbers():
     assert replace_numbers("I have 2 dogs and 1 cat") == "I have two dogs and one cat"
     assert replace_numbers("2025") == "twozerotwofive"
@@ -54,6 +76,4 @@ def test_average_word_length():
     assert average_word_length("Hi!") == 2
     assert round(average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
-
-
 

@@ -11,11 +11,11 @@ from .core import (
     strip_accents, #L
     slugify, #L
     count_vowels, #L
-    #camel_to_snake,#S
-    #truncate, #S
-    #collapse_duplicates, #S
-    #is_anagram, #S
-    #compare_texts, #s
+    camel_to_snake,#S
+    truncate, #S
+    collapse_duplicates, #S
+    is_anagram, #S
+    #compare_texts, #s (NOT DONE)
     replace_numbers, #P
     sentence_count, #p
     average_word_length, #P

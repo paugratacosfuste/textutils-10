@@ -86,6 +86,42 @@ def count_vowels(text):
     count = sum(1 for char in text if char in vowels)
     return count
 
+
+#SEAN AREA
+def camel_to_snake(text): #btw, this does assume that the input is in CamelCaes. Does not have error checks rn
+
+    result = "" #store an empty string
+    for i, char in enumerate(text): 
+        if char.isupper() and i != 0: #goes through the whole word, find if any char is capital besides [0]
+            result += "_"  # if it is, adds underscore before the letter
+        result += char.lower()  # finally, ends by adding back the lowercase into result
+    return result
+
+def truncate(text, n): #takes a text, and a max 'n-length' that you desire, chopping text if too long
+
+    if len(text) > n:
+        return text[:n-3] + "..." #the -3 is because the '...' stands in place of the last three letters 
+    return text
+
+def collapse_duplicates(text, char): #takes a text, and char that we don't want run-on duplicates for
+
+    result = "" #store empty string, which we'll add into
+    for i in range(len(text)): #reads through each letter in text
+
+        if i == 0 or text[i] != char or text[i-1] != char: #all three conditions MUST be false for the word to not be added
+            result += text[i] 
+    return result
+
+def is_anagram(a, b):
+
+    a = a.lower().replace(" ", "") #make all of a + b lowercase, removing spaces as well
+    b = b.lower().replace(" ", "")
+    
+    return sorted(a) == sorted(b) #sorted seperates into individual characters alphabetically. if anogram, it will be TRUE
+
+is_anagram('listen','listenl')
+
+
 def replace_numbers(text):
     numbers = {
         "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
@@ -115,6 +151,4 @@ def average_word_length(text):
         clean = word.strip(".,!?;:")
         total_length += len(clean)
     return total_length / len(words)
-
-
 
