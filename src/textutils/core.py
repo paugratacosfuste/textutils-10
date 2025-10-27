@@ -55,3 +55,5 @@ def remove_punctuation(text):
 #hello sean 1:47
 
 #hello x2 1:48
+
+#attempt 1 to upload to mian 2:10pm
