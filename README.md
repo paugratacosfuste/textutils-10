@@ -3,9 +3,10 @@
 <br><br>
 
 # Table of Contents
-1. [Overview of the Project](#1-overview-of-the-project)
-2. [Structure of the Repository](#2-structure-of-the-repository)
-3. [Code Execution](#3-code-execution)
+1. [Overview of the Project](#1.-overview-of-the-project)
+2. [Structure of the Repository](#2.-structure-of-the-repository)
+3. [Code Execution](#3.-code-execution)
+4. [Testing](#4.-testing)
 
 <br><br>
 
