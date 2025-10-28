@@ -54,6 +54,7 @@ textutils/
 ├─ environment.yml
 ├─ pyproject.toml
 └─ README.md
+# Ignore the A1 file, it will be the submission file 
 </pre>
 
 
@@ -69,6 +70,37 @@ To install all dependencies with the correct versions in the environment, run in
     micromamba create -f environment.yml -y
     micromamba activate textutils
 
-This will install all the necessary dependencies. These can also be found in the requirements.txt file which indicates the respective versions.
+This will install all the necessary dependencies. These can also be found in the requirements.txt file, which indicates the respective versions.
 
-To execute the functions...
+To execute the functions, locate your core file through the terminal:
+<pre>
+    cd src
+</pre>
+
+Then, run your input code and the disired function in the following way in the CLI:
+<pre>
+    python -c "from textutils import #function_name; print(#function_nam('#input'))"
+</pre>
+For example:
+<pre>
+    python -c "from textutils import word_count; print(word_count('Hello, hello world!'))"
+</pre>
+
+
+<br><br>
+
+# 4. Testing
+
+This workbook uses unit testing and end-to-end testing to varify the code's reliability. To check if all functions are up to date, locate the main directory textutils-10:
+
+<pre>
+    cd -
+</pre>
+
+
+
+and enter in the CLI:
+<pre>
+    export PYTHONPATH=src
+    pytest -v
+</pre>
