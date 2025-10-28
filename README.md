@@ -80,7 +80,7 @@ To execute the functions, locate your core file through the terminal:
 
 Then, run your input code and the disired function in the following way in the CLI:
 <pre>
-    python -c "from textutils import #function_name; print(#function_nam('#input'))"
+    python -c "from textutils import #function_name; print(#function_name('#input'))"
 </pre>
 For example:
 <pre>
