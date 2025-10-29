@@ -150,6 +150,20 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
- def compare_texts(text):
-    #@lara to complete here.
-     pass
+
+#Laura area start
+
+def compare_texts(text1, text2):
+    """
+    Compare two texts and return a similarity score based on common words.
+    """              
+    texts = [text1, text2]
+    set1 = set(text1.lower().split())
+    set2 = set(text2.lower().split())
+    intersection = set1.intersection(set2)
+    union = set1.union(set2)
+    if not union:
+        return 0.0
+    return len(intersection) / len(union)
+
+   
