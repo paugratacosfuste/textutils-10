@@ -115,5 +115,15 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
-
-
+def capitalize_sentences(text):
+    result = ''
+    capitalize_next = True
+    for ch in text:
+        if capitalize_next and ch.isalpha():
+            result += ch.upper()
+            capitalize_next = False
+        else:
+            result += ch
+        if ch in '.!?':
+            capitalize_next = True
+    return result    

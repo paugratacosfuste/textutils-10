@@ -55,5 +55,6 @@ def test_average_word_length():
     assert round(average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
 
-
+def test_capitalize_sentences():
+    assert c.capitalize_sentences('hello. does this work? yes.') == 'Hello. Does this work? Yes.'
 
