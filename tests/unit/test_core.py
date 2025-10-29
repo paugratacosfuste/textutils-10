@@ -55,5 +55,8 @@ def test_average_word_length():
     assert round(average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
 
+def test_reverse_words():
+    assert c.reverse_words('two words') == 'Insert a single word'
+    assert c.reverse_words('Word') == 'droW'
 
 
