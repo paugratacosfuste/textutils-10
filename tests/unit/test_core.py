@@ -19,22 +19,6 @@ def test_remove_punctuation():
     text = "Hello, world! It's a great day."
     assert c.remove_punctuation(text) == "Hello world Its a great day"
 
-def test_is_palindrome():
-    #@allesandro to collaborate here
-    pass  # placeholder
-
-def test_unique_words(text):
-    #@pau to collaborate here
-    pass  # placeholder
-
-def test_reverse_words(text):
-    #@jan to collaborate here
-    pass  # placeholder
-
-def test_capitalize_sentences(text):
-    #@laura to collaborate here
-    pass  # placeholder
-
 def test_word_lengths():    
     text = "Hello, world!"
     assert c.word_lengths(text) == [5, 5]
