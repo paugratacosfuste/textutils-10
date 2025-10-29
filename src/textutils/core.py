@@ -180,3 +180,16 @@ def unique_words(text):
         for word in word_list:
             word_unique.add(word)
         return word_unique
+
+def capitalize_sentences(text):
+    result = ''
+    capitalize_next = True
+    for ch in text:
+        if capitalize_next and ch.isalpha():
+            result += ch.upper()
+            capitalize_next = False
+        else:
+            result += ch
+        if ch in '.!?':
+            capitalize_next = True
+    return result    

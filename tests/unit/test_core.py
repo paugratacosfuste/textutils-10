@@ -85,6 +85,9 @@ def test_reverse_words():
     assert c.reverse_words('two words') == 'Insert a single word'
     assert c.reverse_words('Word') == 'droW'
 
+def test_capitalize_sentences():
+    assert c.capitalize_sentences('hello. does this work? yes.') == 'Hello. Does this work? Yes.'
+
 def test_unique_words():
     assert c.unique_words('Data data') == {'data'}
     assert c.unique_words('I love data') == {'i', 'love', 'data'}
