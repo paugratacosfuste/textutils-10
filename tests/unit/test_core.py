@@ -79,3 +79,4 @@ def test_average_word_length():
 
 def test_compare_texts(text):
     #@allessandro to finish testing here
+    pass

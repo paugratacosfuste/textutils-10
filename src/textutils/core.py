@@ -152,4 +152,4 @@ def average_word_length(text):
 
  def compare_texts(text):
     #@lara to complete here.
-    break
+     pass
