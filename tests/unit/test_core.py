@@ -78,5 +78,9 @@ def test_average_word_length():
     print("average_word_length passed")
 
 def test_compare_texts(text):
-    #@allessandro to finish testing here
-    pass
+    assert c.compare_texts("I love data", "I love data") == 1.0
+    assert c.compare_texts("apple", "banana") == 0.0
+    assert round(c.compare_texts("I love data", "I love music"), 2) == 0.5
+    assert c.compare_texts("Data Science", "data science") == 1.0
+    assert c.compare_texts("", "") == 0.0
+    print("compare_texts passed")
