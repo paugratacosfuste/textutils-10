@@ -3,22 +3,22 @@ from .core import (
     top_n,
     normalize_whitespace,
     remove_punctuation,
-    is_palindrome, #A (collaborative)
-    unique_words, #A (collaborative)
-    #reverse_words, #A (collaborative)
-    #capitalize_sentences,#A (collaborative)
-    word_lengths, #L
-    strip_accents, #L
-    slugify, #L
-    count_vowels, #L
-    camel_to_snake,#S
-    truncate, #S
-    collapse_duplicates, #S
-    is_anagram, #S
-    compare_texts, #S, L, A
-    replace_numbers, #P
-    sentence_count, #p
-    average_word_length, #P
+    is_palindrome,
+    unique_words,
+    reverse_words, 
+    capitalize_sentences,
+    word_lengths,
+    strip_accents,
+    slugify,
+    count_vowels,
+    camel_to_snake,
+    truncate,
+    collapse_duplicates,
+    is_anagram,
+    compare_texts,
+    replace_numbers,
+    sentence_count,
+    average_word_length, 
     alternate_case,
     censor_vowels
 )

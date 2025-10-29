@@ -8,6 +8,7 @@ def word_count(text):
     Count the occurrences of each word in the given text (case-insensitive).
     """
     text = text.lower()
+    text = normalize_whitespace(text)
     text = remove_punctuation(text) # uses function from below since otherwise counts punctuation
     words = text.split()
     counts = {}
