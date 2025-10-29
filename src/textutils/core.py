@@ -150,3 +150,6 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
+ def compare_texts(text):
+    #@lara to complete here.
+    break

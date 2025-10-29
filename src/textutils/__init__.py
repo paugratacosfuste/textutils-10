@@ -15,7 +15,7 @@ from .core import (
     truncate, #S
     collapse_duplicates, #S
     is_anagram, #S
-    #compare_texts, #s (NOT DONE)
+    compare_texts, #s (NOT DONE)
     replace_numbers, #P
     sentence_count, #p
     average_word_length, #P
