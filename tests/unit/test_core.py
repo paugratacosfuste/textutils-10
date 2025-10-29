@@ -91,3 +91,21 @@ def test_capitalize_sentences():
 def test_unique_words():
     assert c.unique_words('Data data') == {'data'}
     assert c.unique_words('I love data') == {'i', 'love', 'data'}
+
+
+def test_alternate_case_basic(self):
+        self.assertEqual(alternate_case("hello"), "HeLlO")
+        self.assertEqual(alternate_case("Python"), "PyThOn")
+        self.assertEqual(alternate_case(""), "")  # empty string
+
+    def test_alternate_case_special_chars(self):
+        self.assertEqual(alternate_case("123abc!"), "12 3AbC!")  # spaces and digits remain
+
+    # Tests for censor_vowels
+    def test_censor_vowels_basic(self):
+        self.assertEqual(censor_vowels("hello"), "h*ll*")
+        self.assertEqual(censor_vowels("HELLO"), "H*LL*")
+        self.assertEqual(censor_vowels("xyz"), "xyz")  # no vowels
+
+    def test_censor_vowels_mixed(self):
+        self.assertEqual(censor_vowels("Programming is fun"), "Pr*gr*mm*ng *s f*n")

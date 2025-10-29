@@ -192,3 +192,13 @@ def capitalize_sentences(text):
         if ch in '.!?':
             capitalize_next = True
     return result    
+
+def alternate_case(text):
+    return ''.join(
+        c.upper() if i % 2 == 0 else c.lower()
+        for i, c in enumerate(text)
+    )
+
+def censor_vowels(text):
+    vowels = 'aeiouAEIOU'
+    return ''.join('*' if c in vowels else c for c in text)
