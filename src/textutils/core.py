@@ -172,3 +172,10 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
+def alternate_case(text):
+    return ''.join(
+        c.upper() if i % 2 == 0 else c.lower()
+
+
+def censor_vowels(text):
+    vowels = 'aeiouAEIOU'
