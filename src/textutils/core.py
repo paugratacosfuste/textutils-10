@@ -162,3 +162,11 @@ def is_palindrome(text):
             return True
         else:
             return False
+
+def unique_words(text):
+        text = text.lower()
+        word_list = text.split()
+        word_unique = set()
+        for word in word_list:
+            word_unique.add(word)
+        return word_unique
