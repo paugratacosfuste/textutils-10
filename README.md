@@ -1,4 +1,10 @@
 # Python for Data Science Assignment 1, Team 10
+### Members of Team 10:<br>
+Sean Amir Hoet<br>
+Alessandro Mezzanotte<br>
+Pau Gratacos Fuste<br>
+Lara Lal Isikci<br>
+Jan Erik Sternberg<br>
 
 <br><br>
 
@@ -14,27 +20,28 @@
 
 In this repository, Team 10 is going to explore different functions to manipulate text inputs, improve readablity, and clean strings. The functions implemented in this project include:
 
-- word_count
-- top_n
-- normalize_whitespace
-- remove_punctuation
-- is_palindrome
-- unique_words
-- reverse_words
-- capitalize_sentences
-- word_lengths
-- strip_accents
-- slugify
-- count_vowels
-- camel_to_snake
-- truncate
-- collapse_duplicates
-- is_anagram
-- compare_texts
-- replace_numbers
-- sentence_count
-- average_word_length
-- New functions from us HERE
+* word_count(text) — case-insensitive counts.  
+* top_n(counts, n) — top-N by frequency, ties alphabetical.  
+* normalize_whitespace(text) — collapse runs of whitespace, trim ends.  
+* remove_punctuation(text) — strip punctuation while keeping spaces and letters.  
+* is_palindrome(text) — check if text reads the same backwards (ignore case and spaces).  
+* unique_words(text) — return a sorted list of distinct words (case-insensitive).  
+* reverse_words(text) — reverse the order of words, not characters.  
+* capitalize_sentences(text) — ensure each sentence starts with a capital letter.  
+* word_lengths(text) — return a dict mapping words to their lengths.  
+* strip_accents(text) — remove accents from characters (e.g., café → cafe).  
+* slugify(text) — convert text to lowercase, hyphen-separated safe string.  
+* count_vowels(text) — count vowels in the given text.  
+* camel_to_snake(text) — convert CamelCase identifiers to snake_case.  
+* truncate(text, n) — shorten text to n characters, adding “...” if needed.  
+* collapse_duplicates(text, char) — replace runs of the same char with one.  
+* is_anagram(a, b) — check if two texts are anagrams (ignore case and spaces).  
+* compare_texts(text1, text2) — compute similarity based on common word ratio.  
+* replace_numbers(text) — replace digits with their word equivalents (2 → two).  
+* sentence_count(text) — count number of sentences in text.  
+* average_word_length(text) — compute mean length of words in text.
+* alternate_case - capitalize every second letter.
+* censor_vowels  -censors all the vowels.
 
 <br><br>
 
@@ -54,8 +61,9 @@ textutils/
 │     └─ test_end_to_end.py
 ├─ environment.yml
 ├─ pyproject.toml
-└─ README.md
-# Ignore the A1 file, it will be the submission file 
+├─ README.md
+├─ A1.ipynb #it will be the submission file 
+└─ pyproject.toml
 </pre>
 
 
@@ -78,7 +86,7 @@ To execute the functions, locate your core file through the terminal:
     cd src
 </pre>
 
-Then, run your input code and the disired function in the following way in the CLI:
+Then, run your input code and the desired function in the following way in the CLI:
 <pre>
     python -c "from textutils import #function_name; print(#function_name('#input'))"
 </pre>
@@ -92,7 +100,7 @@ For example:
 
 # 4. Testing
 
-This workbook uses unit testing and end-to-end testing to varify the code's reliability. To check if all functions are up to date, locate the main directory textutils-10:
+This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, locate the main directory textutils-10:
 
 <pre>
     cd -
