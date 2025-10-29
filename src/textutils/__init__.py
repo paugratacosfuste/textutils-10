@@ -19,6 +19,8 @@ from .core import (
     replace_numbers, #P
     sentence_count, #p
     average_word_length, #P
+    alternate_case,
+    censor_vowels
 )
 
 # Define __all__ for clarity
@@ -43,4 +45,6 @@ __all__ = [
     "replace_numbers",
     "sentence_count",
     "average_word_length",
+    "alternate_case",
+    "censor_vowels"
 ]

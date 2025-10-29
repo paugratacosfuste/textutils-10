@@ -59,22 +59,22 @@ def test_is_anagram():
         assert c.is_anagram("", "") == True
 
 def test_replace_numbers():
-    assert replace_numbers("I have 2 dogs and 1 cat") == "I have two dogs and one cat"
-    assert replace_numbers("2025") == "twozerotwofive"
-    assert replace_numbers("no digits") == "no digits"
+    assert c.replace_numbers("I have 2 dogs and 1 cat") == "I have two dogs and one cat"
+    assert c.replace_numbers("2025") == "twozerotwofive"
+    assert c.replace_numbers("no digits") == "no digits"
     print("replace_numbers passed")
 
 def test_sentence_count():
-    assert sentence_count("Hi. How are you? Fine!") == 3
-    assert sentence_count("No punctuation here") == 0
-    assert sentence_count("One... two.") == 2
+    assert c.sentence_count("Hi. How are you? Fine!") == 3
+    assert c.sentence_count("No punctuation here") == 0
+    assert c.sentence_count("One... two.") == 2
     print("sentence_count passed")
 
 def test_average_word_length():
-    assert round(average_word_length("I love AI"), 2) == 2.33
-    assert average_word_length("") == 0
-    assert average_word_length("Hi!") == 2
-    assert round(average_word_length("A cat, a dog."), 2) == 2.25
+    assert round(c.average_word_length("I love AI"), 2) == 2.33
+    assert c.average_word_length("") == 0
+    assert c.average_word_length("Hi!") == 2
+    assert round(c.average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
 
 def test_compare_texts(text):
@@ -84,3 +84,36 @@ def test_compare_texts(text):
     assert c.compare_texts("Data Science", "data science") == 1.0
     assert c.compare_texts("", "") == 0.0
     print("compare_texts passed")
+
+def test_is_palindrome():
+    assert c.is_palindrome('bro') == False
+    assert c.is_palindrome('oro') == True
+
+def test_reverse_words():
+    assert c.reverse_words('two words') == 'Insert a single word'
+    assert c.reverse_words('Word') == 'droW'
+
+def test_capitalize_sentences():
+    assert c.capitalize_sentences('hello. does this work? yes.') == 'Hello. Does this work? Yes.'
+
+def test_unique_words():
+    assert c.unique_words('Data data') == {'data'}
+    assert c.unique_words('I love data') == {'i', 'love', 'data'}
+
+
+def test_alternate_case_basic(self):
+        self.assertEqual(alternate_case("hello"), "HeLlO")
+        self.assertEqual(alternate_case("Python"), "PyThOn")
+        self.assertEqual(alternate_case(""), "")  # empty string
+
+    def test_alternate_case_special_chars(self):
+        self.assertEqual(alternate_case("123abc!"), "12 3AbC!")  # spaces and digits remain
+
+    # Tests for censor_vowels
+    def test_censor_vowels_basic(self):
+        self.assertEqual(censor_vowels("hello"), "h*ll*")
+        self.assertEqual(censor_vowels("HELLO"), "H*LL*")
+        self.assertEqual(censor_vowels("xyz"), "xyz")  # no vowels
+
+    def test_censor_vowels_mixed(self):
+        self.assertEqual(censor_vowels("Programming is fun"), "Pr*gr*mm*ng *s f*n")
