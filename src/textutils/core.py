@@ -116,5 +116,9 @@ def average_word_length(text):
     return total_length / len(words)
 
 def unique_words(text):
-    for word in text:
-        text.split
+        text = text.lower()
+        word_list = text.split()
+        word_unique = set()
+        for word in word_list:
+            word_unique.add(word)
+        return word_unique

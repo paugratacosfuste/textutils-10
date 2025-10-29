@@ -55,5 +55,6 @@ def test_average_word_length():
     assert round(c.average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
 
-
-
+def test_unique_words():
+    assert c.unique_words('Data data') == {'data'}
+    assert c.unique_words('I love data') == {'i', 'love', 'data'}
