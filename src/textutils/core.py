@@ -150,6 +150,16 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
+def reverse_words(text):
+    if ' ' in text:
+        return 'Insert a single word'
+    else:
+        word = []
+        for x in text:
+            word.insert(0, x)
+        reversed_word = ''.join(word)
+        return reversed_word
+
 def is_palindrome(text):
     if ' ' in text:
         return 'Insert a single word'

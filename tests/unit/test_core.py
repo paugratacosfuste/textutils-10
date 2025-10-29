@@ -81,6 +81,10 @@ def test_is_palindrome():
     assert c.is_palindrome('bro') == False
     assert c.is_palindrome('oro') == True
 
+def test_reverse_words():
+    assert c.reverse_words('two words') == 'Insert a single word'
+    assert c.reverse_words('Word') == 'droW'
+
 def test_unique_words():
     assert c.unique_words('Data data') == {'data'}
     assert c.unique_words('I love data') == {'i', 'love', 'data'}
