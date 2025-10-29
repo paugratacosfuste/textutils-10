@@ -149,12 +149,46 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
-def alternate_case(text):
-    return ''.join(
-        c.upper() if i % 2 == 0 else c.lower()
-        for i, c in enumerate(text)
-    )
+def reverse_words(text):
+    if ' ' in text:
+        return 'Insert a single word'
+    else:
+        word = []
+        for x in text:
+            word.insert(0, x)
+        reversed_word = ''.join(word)
+        return reversed_word
 
-def censor_vowels(text):
-    vowels = 'aeiouAEIOU'
-    return ''.join('*' if c in vowels else c for c in text)
+def is_palindrome(text):
+    if ' ' in text:
+        return 'Insert a single word'
+    else:
+        word = []
+        for x in text:
+            word.insert(0, x)
+        reversed_word = ''.join(word)
+        if reversed_word == text:
+            return True
+        else:
+            return False
+
+def unique_words(text):
+        text = text.lower()
+        word_list = text.split()
+        word_unique = set()
+        for word in word_list:
+            word_unique.add(word)
+        return word_unique
+
+def capitalize_sentences(text):
+    result = ''
+    capitalize_next = True
+    for ch in text:
+        if capitalize_next and ch.isalpha():
+            result += ch.upper()
+            capitalize_next = False
+        else:
+            result += ch
+        if ch in '.!?':
+            capitalize_next = True
+    return result    

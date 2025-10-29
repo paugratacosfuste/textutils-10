@@ -77,19 +77,17 @@ def test_average_word_length():
     assert round(c.average_word_length("A cat, a dog."), 2) == 2.25
     print("average_word_length passed")
 
-def test_alternate_case_basic(self):
-        self.assertEqual(alternate_case("hello"), "HeLlO")
-        self.assertEqual(alternate_case("Python"), "PyThOn")
-        self.assertEqual(alternate_case(""), "")  # empty string
+def test_is_palindrome():
+    assert c.is_palindrome('bro') == False
+    assert c.is_palindrome('oro') == True
 
-    def test_alternate_case_special_chars(self):
-        self.assertEqual(alternate_case("123abc!"), "12 3AbC!")  # spaces and digits remain
+def test_reverse_words():
+    assert c.reverse_words('two words') == 'Insert a single word'
+    assert c.reverse_words('Word') == 'droW'
 
-    # Tests for censor_vowels
-    def test_censor_vowels_basic(self):
-        self.assertEqual(censor_vowels("hello"), "h*ll*")
-        self.assertEqual(censor_vowels("HELLO"), "H*LL*")
-        self.assertEqual(censor_vowels("xyz"), "xyz")  # no vowels
+def test_capitalize_sentences():
+    assert c.capitalize_sentences('hello. does this work? yes.') == 'Hello. Does this work? Yes.'
 
-    def test_censor_vowels_mixed(self):
-        self.assertEqual(censor_vowels("Programming is fun"), "Pr*gr*mm*ng *s f*n")
+def test_unique_words():
+    assert c.unique_words('Data data') == {'data'}
+    assert c.unique_words('I love data') == {'i', 'love', 'data'}
