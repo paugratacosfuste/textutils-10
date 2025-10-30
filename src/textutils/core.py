@@ -194,5 +194,5 @@ def alternate_case(text):
     )
 
 def censor_vowels(text):
-    vowels = 'aeiouAEIOU'
-    return ''.join('*' if c in vowels else c for c in text)
+    vowels = 'aeiouAEIOU'  # Define all vowels (both lowercase and uppercase)
+    return ''.join('*' if c in vowels else c for c in text)  # Replace vowels with '*' and keep other characters
