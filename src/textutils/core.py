@@ -153,15 +153,15 @@ def reverse_words(text): #function that returns the word reversed
         reversed_word = ''.join(word) #loop to reverse the word
         return reversed_word
 
-def is_palindrome(text):
-    if ' ' in text:
+def is_palindrome(text): 
+    if ' ' in text:  # Check if input contains spaces
         return 'Insert a single word'
     else:
-        word = []
-        for x in text:
-            word.insert(0, x)
-        reversed_word = ''.join(word)
-        if reversed_word == text:
+        word = []  # Initialize empty list to store reversed characters
+        for x in text:  # Loop through each character in the text
+            word.insert(0, x)  # Insert character at the start of the list (reverses order)
+        reversed_word = ''.join(word)  # Join list into a string
+        if reversed_word == text:  # Compare reversed word with original
             return True
         else:
             return False
