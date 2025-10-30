@@ -40,8 +40,8 @@ In this repository, Team 10 is going to explore different functions to manipulat
 * replace_numbers(text) — replace digits with their word equivalents (2 → two).  
 * sentence_count(text) — count number of sentences in text.  
 * average_word_length(text) — compute mean length of words in text.
-* alternate_case - capitalize every second letter.
-* censor_vowels  -censors all the vowels.
+* alternate_case — capitalize every second letter.
+* censor_vowels — censors all the vowels.
 
 <br><br>
 
