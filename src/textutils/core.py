@@ -175,17 +175,17 @@ def unique_words(text):
     return word_unique  # Return the set of unique words
 
 def capitalize_sentences(text):
-    result = ''
-    capitalize_next = True
-    for ch in text:
-        if capitalize_next and ch.isalpha():
-            result += ch.upper()
-            capitalize_next = False
+    result = ''  # Store the final formatted text
+    capitalize_next = True  # Flag to indicate when to capitalize
+    for ch in text:  # Loop through each character in the text
+        if capitalize_next and ch.isalpha():  # If flag is True and char is a letter
+            result += ch.upper()  # Capitalize the character
+            capitalize_next = False  # Reset flag until next sentence
         else:
-            result += ch
-        if ch in '.!?':
-            capitalize_next = True
-    return result    
+            result += ch  # Add character as is
+        if ch in '.!?':  # After sentence-ending punctuation
+            capitalize_next = True  # Next letter should be capitalized
+    return result  # Return the capitalized text
 
 def alternate_case(text):
     return ''.join(
