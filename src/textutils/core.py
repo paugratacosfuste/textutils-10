@@ -167,12 +167,12 @@ def is_palindrome(text):
             return False
 
 def unique_words(text):
-        text = text.lower()
-        word_list = text.split()
-        word_unique = set()
-        for word in word_list:
-            word_unique.add(word)
-        return word_unique
+    text = text.lower()  # Convert text to lowercase for consistency
+    word_list = text.split()  # Split text into a list of words
+    word_unique = set()  # Initialize an empty set to store unique words
+    for word in word_list:  # Loop through each word in the list
+        word_unique.add(word)  # Add word to the set (duplicates ignored)
+    return word_unique  # Return the set of unique words
 
 def capitalize_sentences(text):
     result = ''
