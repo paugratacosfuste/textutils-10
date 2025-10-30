@@ -143,14 +143,14 @@ def average_word_length(text): #function that counts the average word length in 
         total_length += len(clean) # loop that counts the splitted words and adds the amount to the counter
     return total_length / len(words) #returning total length
 
-def reverse_words(text):
+def reverse_words(text): #function that returns the word reversed
     if ' ' in text:
-        return 'Insert a single word'
+        return 'Insert a single word' #making sure only one word is provided
     else:
-        word = []
+        word = [] 
         for x in text:
             word.insert(0, x)
-        reversed_word = ''.join(word)
+        reversed_word = ''.join(word) #loop to reverse the word
         return reversed_word
 
 def is_palindrome(text):
