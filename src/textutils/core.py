@@ -188,9 +188,9 @@ def capitalize_sentences(text):
     return result  # Return the capitalized text
 
 def alternate_case(text):
-    return ''.join(
-        c.upper() if i % 2 == 0 else c.lower()
-        for i, c in enumerate(text)
+    return ''.join(  # Join all characters into a single string
+        c.upper() if i % 2 == 0 else c.lower()  # Uppercase even-indexed chars, lowercase odd ones
+        for i, c in enumerate(text)  # Enumerate gives index and character
     )
 
 def censor_vowels(text):
