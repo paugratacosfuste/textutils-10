@@ -35,7 +35,6 @@ def remove_punctuation(text):
             result += char
     return result
 
-
 def word_lengths(text):
     #Return a list of the lengths of each word in the text.
     text = remove_punctuation(text) # uses function from above since otherwise counts punctuation
@@ -90,7 +89,19 @@ def is_anagram(a, b):
     b = b.lower().replace(" ", "")
     
     return sorted(a) == sorted(b) #sorted seperates into individual characters alphabetically. if anogram, it will be TRUE
-#SEAN AREA END
+
+def compare_texts(text1, text2):
+    #Compute similarity between two texts based on the ratio of common words. Returns a float between 0 and 1.
+
+    words1 = set(text1.lower().split()) # Convert both texts to lowercase and split into word sets
+    words2 = set(text2.lower().split())
+
+    common = words1 & words2 # Find intersection (common words)
+
+    total_unique = len(words1 | words2) # Compute ratio: common words divided by total unique words
+    if total_unique == 0:
+        return 0.0  # Handle empty input case
+    return len(common) / total_unique
 
 def replace_numbers(text): #replacing each number for its written counter part
     numbers = {

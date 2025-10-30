@@ -5,8 +5,8 @@ from .core import (
     remove_punctuation,
     is_palindrome, #A (collaborative)
     unique_words, #A (collaborative)
-    #reverse_words, #A (collaborative)
-    #capitalize_sentences,#A (collaborative)
+    reverse_words, #A (collaborative)
+    capitalize_sentences,#A (collaborative)
     word_lengths, #L
     strip_accents, #L
     slugify, #L
@@ -15,7 +15,7 @@ from .core import (
     truncate, #S
     collapse_duplicates, #S
     is_anagram, #S
-    #compare_texts, #s (NOT DONE)
+    compare_texts, #s 
     replace_numbers, #P
     sentence_count, #p
     average_word_length, #P
