@@ -85,11 +85,11 @@ This will install all the necessary dependencies. These can also be found in the
 
 Then, run your input code and the desired function in the following way in the CLI:
 <pre>
-    python -c "from textutils import #function_name; print(#function_name('#input'))"
+python -c "from textutils import #function_name; print(#function_name('#input'))"
 </pre>
 For example:
 <pre>
-    python -c "from textutils import word_count; print(word_count('Hello, hello world!'))"
+python -c "from textutils import word_count; print(word_count('Hello, hello world!'))"
 </pre>
 
 
@@ -99,5 +99,5 @@ For example:
 
 This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, enter in the CLI:
 <pre>
-    pytest
+pytest
 </pre>
