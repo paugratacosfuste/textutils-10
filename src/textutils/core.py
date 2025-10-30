@@ -133,15 +133,15 @@ def sentence_count(text): #functions that counts the amount of sentences in a te
             count += 1
     return count #loop that uses punctuation signs to find the end of a sentences and add 1 to counter
 
-def average_word_length(text):
-    words = text.split()
+def average_word_length(text): #function that counts the average word length in a given text
+    words = text.split() #splitting the woprds of the text
     if not words:
-        return 0
-    total_length = 0
+        return 0 #making sure the text has words that we can count
+    total_length = 0 
     for word in words:
         clean = word.strip(".,!?;:")
-        total_length += len(clean)
-    return total_length / len(words)
+        total_length += len(clean) # loop that counts the splitted words and adds the amount to the counter
+    return total_length / len(words) #returning total length
 
 def reverse_words(text):
     if ' ' in text:
