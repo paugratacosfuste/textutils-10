@@ -83,21 +83,21 @@ To install all dependencies with the correct versions in the environment, run in
 
 This will install all the necessary dependencies. These can also be found in the requirements.txt file, which indicates the respective versions.
 
-Then, run your input code and the desired function in the following way in the CLI:
-<pre>
-python -c "from textutils import #function_name; print(#function_name('#input'))"
-</pre>
-For example:
-<pre>
-python -c "from textutils import word_count; print(word_count('Hello, hello world!'))"
-</pre>
+Then, run your input code and the desired function in the following way in the CLI:<br>
+
+    python -c "from textutils import #function_name; print(#function_name('#input'))"
+
+For example:<br>
+
+    python -c "from textutils import word_count; print(word_count('Hello, hello world!'))"
+
 
 
 <br><br>
 
 # 4. Testing
 
-This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, enter in the CLI:
-<pre>
-pytest
-</pre>
+This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, enter in the CLI:<br>
+
+    pytest
+
