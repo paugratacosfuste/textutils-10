@@ -113,18 +113,18 @@ def is_anagram(a, b):
     return sorted(a) == sorted(b) #sorted seperates into individual characters alphabetically. if anogram, it will be TRUE
 #SEAN AREA END
 
-def replace_numbers(text):
+def replace_numbers(text): #replacing each number for its written counter part
     numbers = {
         "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
         "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"
-    }
+    } # definition through a library of each counterparts
     result = ""
     for ch in text:
         if ch in numbers:
             result += numbers[ch]
         else:
             result += ch
-    return result
+    return result # loop that looks for the counterpart of the input
 
 def sentence_count(text):
     count = 0
