@@ -126,12 +126,12 @@ def replace_numbers(text): #replacing each number for its written counter part
             result += ch
     return result # loop that looks for the counterpart of the input
 
-def sentence_count(text):
-    count = 0
-    for ch in text:
+def sentence_count(text): #functions that counts the amount of sentences in a text
+    count = 0 #counter set to 0
+    for ch in text: 
         if ch in [".", "!", "?"]:
             count += 1
-    return count
+    return count #loop that uses punctuation signs to find the end of a sentences and add 1 to counter
 
 def average_word_length(text):
     words = text.split()
