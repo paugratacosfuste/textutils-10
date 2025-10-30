@@ -33,7 +33,7 @@ def normalize_whitespace(text):
     Collapse runs of whitespace (spaces, tabs, newlines) into a single space,
     and trim spaces.
     """
-    # Split on any whitespace with split() function
+    # Split on any whitespace with split function
     words = text.split()
 
     # Join them back with a single space with join function
@@ -82,15 +82,18 @@ def slugify(text):
     return slug
 
 def count_vowels(text):
+    """
+    Function to count the number of vowels in a text
+    """
     vowels = "aeiouAEIOU"
     count = sum(1 for char in text if char in vowels)
     return count
 
-
-#SEAN AREA START
-def camel_to_snake(text): #btw, this does assume that the input is in CamelCaes. Does not have error checks rn
-
-    result = "" #store an empty string
+def camel_to_snake(text): 
+    """
+    Finds and replaces CamelCase with snake_case
+    """
+    result = ""
     for i, char in enumerate(text): 
         if char.isupper() and i != 0: #goes through the whole word, find if any char is capital besides [0]
             result += "_"  # if it is, adds underscore before the letter
@@ -98,13 +101,17 @@ def camel_to_snake(text): #btw, this does assume that the input is in CamelCaes.
     return result
 
 def truncate(text, n): #takes a text, and a max 'n-length' that you desire, chopping text if too long
-
+    """
+    Shorten text to n characters, adding “...” if needed.
+    """
     if len(text) > n:
         return text[:n-3] + "..." #the -3 is because the '...' stands in place of the last three letters 
     return text
 
-def collapse_duplicates(text, char): #takes a text, and char that we don't want run-on duplicates for
-
+def collapse_duplicates(text, char):
+    """
+    Takes a text, and char that we don't want run-on duplicates for
+    """
     result = "" #store empty string, which we'll add into
     for i in range(len(text)): #reads through each letter in text
 
@@ -113,14 +120,18 @@ def collapse_duplicates(text, char): #takes a text, and char that we don't want 
     return result
 
 def is_anagram(a, b):
-
+    """
+    Checks if two words are anagrams
+    """
     a = a.lower().replace(" ", "") #make all of a + b lowercase, removing spaces as well
     b = b.lower().replace(" ", "")
     
     return sorted(a) == sorted(b) #sorted seperates into individual characters alphabetically. if anogram, it will be TRUE
-#SEAN AREA END
 
 def replace_numbers(text):
+    """
+    Replaces numbers with their word equivalent
+    """
     numbers = {
         "0": "zero", "1": "one", "2": "two", "3": "three", "4": "four",
         "5": "five", "6": "six", "7": "seven", "8": "eight", "9": "nine"
@@ -134,6 +145,9 @@ def replace_numbers(text):
     return result
 
 def sentence_count(text):
+    """
+    Count the number of sentences in the text.
+    """
     count = 0
     for ch in text:
         if ch in [".", "!", "?"]:
@@ -150,9 +164,6 @@ def average_word_length(text):
         total_length += len(clean)
     return total_length / len(words)
 
-
-#Laura area start
-
 def compare_texts(text1, text2):
     """
     Compare two texts and return a similarity score based on common words.
@@ -168,6 +179,9 @@ def compare_texts(text1, text2):
 
    
 def reverse_words(text):
+    """
+    Reverse the order of the words in the text.
+    """
     if ' ' in text:
         return 'Insert a single word'
     else:
@@ -178,6 +192,9 @@ def reverse_words(text):
         return reversed_word
 
 def is_palindrome(text):
+    """
+    Check if the text is a palindrome
+    """
     if ' ' in text:
         return 'Insert a single word'
     else:
@@ -191,14 +208,20 @@ def is_palindrome(text):
             return False
 
 def unique_words(text):
-        text = text.lower()
-        word_list = text.split()
-        word_unique = set()
-        for word in word_list:
-            word_unique.add(word)
-        return word_unique
+    """
+    Find the unique words in the text
+    """
+    text = text.lower()
+    word_list = text.split()
+    word_unique = set()
+    for word in word_list:
+        word_unique.add(word)
+    return word_unique
 
 def capitalize_sentences(text):
+    """
+    Capitalize the first letter of each sentence
+    """
     result = ''
     capitalize_next = True
     for ch in text:
@@ -212,11 +235,17 @@ def capitalize_sentences(text):
     return result    
 
 def alternate_case(text):
+    """
+    Makes alternate characters uppercase
+    """
     return ''.join(
         c.upper() if i % 2 == 0 else c.lower()
         for i, c in enumerate(text)
     )
 
 def censor_vowels(text):
+    """
+    Censor all vowels in the text with asterisks
+    """
     vowels = 'aeiouAEIOU'
     return ''.join('*' if c in vowels else c for c in text)

@@ -1,4 +1,4 @@
 name: textutils
 dependencies:
-  - python=3.11.5
+  - python=3.12
   - pytest=7.4.0

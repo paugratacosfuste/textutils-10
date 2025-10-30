@@ -1,6 +1,9 @@
-from textutils import core as c # Assuming all functions are in textutils.core
+from textutils import core as c
 
 def test_full_text_processing_pipeline():
+    """
+    Running a first set of end-to-end tests
+    """
     text = "Red red BLUE"
     normalized = c.normalize_whitespace(text)
     counts = c.word_count(normalized)
@@ -9,6 +12,9 @@ def test_full_text_processing_pipeline():
 
 
 def test_case_and_censor_pipeline():
+    """
+    Running a second set of end-to-end tests
+    """
     text_input = "what a great day! is THIS fun? absolutely."
     text_step_1 = c.capitalize_sentences(text_input)
     text_step_2 = c.alternate_case(text_step_1)

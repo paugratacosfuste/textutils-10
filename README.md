@@ -9,10 +9,10 @@ Jan Erik Sternberg<br>
 <br><br>
 
 # Table of Contents
-1. [Overview of the Project](#1.-overview-of-the-project)
-2. [Structure of the Repository](#2.-structure-of-the-repository)
-3. [Code Execution](#3.-code-execution)
-4. [Testing](#4.-testing)
+1. [Overview of the Project](#overview-of-the-project)
+2. [Structure of the Repository](#structure-of-the-repository)
+3. [Code Execution](#code-execution)
+4. [Testing](#testing)
 
 <br><br>
 
@@ -59,11 +59,12 @@ textutils/
 │  │  └─ test_core.py
 │  └─ integration/
 │     └─ test_end_to_end.py
+├─ .gitignore
+├─ A1.ipynb #it will be the submission file 
 ├─ environment.yml
 ├─ pyproject.toml
 ├─ README.md
-├─ A1.ipynb #it will be the submission file 
-└─ pyproject.toml
+└─ setup.cfg
 </pre>
 
 
@@ -78,13 +79,9 @@ To install all dependencies with the correct versions in the environment, run in
 
     micromamba create -f environment.yml -y
     micromamba activate textutils
+    pip install -e .
 
 This will install all the necessary dependencies. These can also be found in the requirements.txt file, which indicates the respective versions.
-
-To execute the functions, locate your core file through the terminal:
-<pre>
-    cd src
-</pre>
 
 Then, run your input code and the desired function in the following way in the CLI:
 <pre>
@@ -100,16 +97,7 @@ For example:
 
 # 4. Testing
 
-This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, locate the main directory textutils-10:
-
+This workbook uses unit testing and end-to-end testing to verify the code's reliability. To check if all functions are up to date, enter in the CLI:
 <pre>
-    cd -
-</pre>
-
-
-
-and enter in the CLI:
-<pre>
-    export PYTHONPATH=src
-    pytest -v
+    pytest
 </pre>

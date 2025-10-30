@@ -1,6 +1,7 @@
 '''
 For testing the core module
 '''
+
 import textutils. core as c
 
 def test_word_count_basic():
