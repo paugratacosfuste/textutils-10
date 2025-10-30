@@ -1,8 +1,6 @@
 '''
 This this the core module of the textutils package to do all the functions
 '''
-
-
 def word_count(text):
     """
     Count the occurrences of each word in the given text (case-insensitive).
@@ -14,7 +12,6 @@ def word_count(text):
     for word in words:
         counts[word] = counts.get(word, 0) + 1
     return counts
-
 
 def top_n(counts, n):
     """
@@ -37,7 +34,6 @@ def normalize_whitespace(text):
 
     # Join them back with a single space with join function
     return " ".join(words)
-
 
 import string
 def remove_punctuation(text):
@@ -85,9 +81,7 @@ def count_vowels(text):
     count = sum(1 for char in text if char in vowels)
     return count
 
-
-#SEAN AREA START
-def camel_to_snake(text): #btw, this does assume that the input is in CamelCaes. Does not have error checks rn
+def camel_to_snake(text):
 
     result = "" #store an empty string
     for i, char in enumerate(text): 
